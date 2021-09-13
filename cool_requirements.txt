@@ -8,3 +8,5 @@ math
 stats
 pandas
 numpy
+fastai
+catboost
