@@ -4,4 +4,8 @@ tensorflow
 xgboost
 catboost
 lightgbm
+flair
+math
+stats
+
 
