@@ -7,5 +7,7 @@ lightgbm
 flair
 math
 stats
+flaml
+prophet
 
 
