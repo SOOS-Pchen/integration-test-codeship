@@ -4,4 +4,6 @@ tensorflow
 xgboost
 catboost
 lightgbm
+flair
+pytorch
 
