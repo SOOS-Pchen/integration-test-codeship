@@ -1,0 +1,13 @@
+#PUT THIS CONTENT INTO codeship-services.yml
+soos-dast-analysis:
+  image: docker:stable-dind
+  add_docker: true
+  environment:
+    - SOOS_TARGET_URL='https://brokencrystals.com'
+    - SOOS_CLIENT_ID=<YOUR_CLIENT_ID>
+    - SOOS_API_KEY=<YOUR_API_KEY>
+  cached: true
+# PUT THIS CONTENT INTO codeship-steps.yml
+- name: 'DAST SOOS Analysis'
+  service: soos-dast-analysis
+  command: /bin/sh -c 'docker run -it --rm soosio/dast --clientId=$SOOS_CLIENT_ID --apiKey=$SOOS_API_KEY --projectName="<YOUR_PROJECT_NAME>" --scanMode=baseline --apiURL=https://qa-api.soos.io/api/ $SOOS_TARGET_URL'
