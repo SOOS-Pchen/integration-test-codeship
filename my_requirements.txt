@@ -5,6 +5,4 @@ nltk
 glob
 math
 numpy
-sklearn
-pandas
-pprint
+
