@@ -3,6 +3,5 @@ flair
 pytorch
 nltk
 glob
-math
-numpy
+
 
